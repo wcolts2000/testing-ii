@@ -29,9 +29,13 @@ class App extends Component {
 
   handleBoardChange = name => {
     let prevState = this.state[name];
-    console.log(prevState);
+    let strikes = this.state.strikes;
 
-    this.setState({ [name]: prevState + 1 });
+    if (name === "fouls" && this.state.strikes < 2) {
+      this.setState({ [name]: prevState + 1, strikes: strikes + 1 });
+    } else {
+      this.setState({ [name]: prevState + 1 });
+    }
   };
 
   render() {

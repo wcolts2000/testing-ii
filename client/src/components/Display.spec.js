@@ -1,9 +1,27 @@
+import "jest-dom/extend-expect";
 import React from "react";
-import ReactDOM from "react-dom";
+import { cleanup, render } from "react-testing-library";
 import Display from "./Display";
 
-it("renders without crashing", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<Display />, div);
-  ReactDOM.unmountComponentAtNode(div);
+afterEach(cleanup);
+
+// describe("<Display/>", () => {
+//   it("renders the display component", async () => {
+//     const { getByTestId, debug } = render(<Display />);
+//     debug();
+//     const title = await waitForElement(() => {
+//       getByTestId("display");
+//     });
+
+//     expect(getByTestId("display")).toHaveTextContent("Display");
+//   });
+// });
+describe("<Display/>", () => {
+  test("renders the display component", async () => {
+    const { getByTestId, debug } = await render(<Display currentState />);
+    debug();
+    const title = getByTestId("display");
+
+    expect(title).toHaveTextContent(/display/i);
+  });
 });
