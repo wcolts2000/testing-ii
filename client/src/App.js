@@ -10,6 +10,15 @@ class App extends Component {
     fouls: 0
   };
 
+  componentDidUpdate = (prevProps, prevState) => {
+    if (prevState.balls === 3 && prevState.balls !== this.state.balls) {
+      this.setState({ balls: 0, strikes: 0, fouls: 0 });
+    }
+    if (prevState.strikes === 2 && prevState.strikes !== this.state.strikes) {
+      this.setState({ balls: 0, strikes: 0, fouls: 0 });
+    }
+  };
+
   handleHit = () => {
     this.setState({
       balls: 0,

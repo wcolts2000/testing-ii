@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 
 export default class Dashboard extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { handleBoardChange, handleHit } = this.props;
     return (
