@@ -6,10 +6,21 @@ export default class Dashboard extends Component {
     return (
       <div>
         <h1>Dashboard</h1>
-        <button onClick={() => handleBoardChange("balls")}>Balls</button>
-        <button onClick={() => handleBoardChange("strikes")}>Strikes</button>
-        <button onClick={() => handleBoardChange("fouls")}>Fouls</button>
-        <button onClick={() => handleHit()}>hit</button>
+        <button data-testid="balls" onClick={() => handleBoardChange("balls")}>
+          Balls
+        </button>
+        <button
+          data-testid="strikes"
+          onClick={() => handleBoardChange("strikes")}
+        >
+          Strikes
+        </button>
+        <button data-testid="fouls" onClick={() => handleBoardChange("fouls")}>
+          Fouls
+        </button>
+        <button data-testid="hit" onClick={() => handleHit()}>
+          hit
+        </button>
       </div>
     );
   }

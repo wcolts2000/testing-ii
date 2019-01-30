@@ -51,16 +51,16 @@ The specifications are listed below.
 
 ### Display
 
-- display the count of `balls` and `strikes` for the at-bat.
-- resets both balls and strikes to 0 when a player reaches 3 strikes or 4 balls.
-- resets both balls and strikes to 0 when a player connects any type of hit.
-- should be updated when the user records activity on the `Dashboard` component.
+- [ x ] display the count of `balls` and `strikes` for the at-bat.
+- [ x ] resets both balls and strikes to 0 when a player reaches 3 strikes or 4 balls.
+- [ x ] resets both balls and strikes to 0 when a player connects any type of hit.
+- [ x ] should be updated when the user records activity on the `Dashboard` component.
 
 ### Dashboard
 
-- provide buttons that the person in charge can press every time there is a `strike`, `ball`, `foul` or `hit`.
-- there is **no** need to specify the type of hit (single, double, etc).
-- changes recorded on this component should update the information shown by the `Display` component.
+- [ x ] provide buttons that the person in charge can press every time there is a `strike`, `ball`, `foul` or `hit`.
+- [ x ] there is **no** need to specify the type of hit (single, double, etc).
+- [ x ] changes recorded on this component should update the information shown by the `Display` component.
 
 Feel free add other components and organize and name your components any way you want to arrive at the requirements. **Make it up and make it happen developer!**.
 
