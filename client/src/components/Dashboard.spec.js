@@ -34,7 +34,7 @@ describe("should have buttons", () => {
     const fouls = getByTestId("fouls");
     expect(balls).toHaveTextContent(/balls/i);
     expect(strikes).toBeVisible();
-    // expect(hitButton).toHaveAttribute("onClick");
+    // expect(hitButton).toHaveAttribute(onClick);
     expect(fouls).toBeInTheDocument();
   });
 });
